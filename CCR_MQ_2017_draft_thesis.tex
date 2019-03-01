@@ -1,0 +1,99 @@
+\documentclass[phd, titlesmallcaps, examinerscopy, copyrightpage, foronline]{mqthesis}
+  
+8
+
+%\documentclass[phd, examinerscopy, copyrightpage]{mqthesis}
+\ifpdf
+    \pdfinfo { /Title  (Connecting the Bush)
+               /Creator (pdflatex) % probably this
+               /Producer (LaTeX with hyperref) % something like this
+               /Author (Christopher Rauchle chris.rauchle@gmail.com)
+               /CreationDate (D:20180718000000)  %format D:YYYYMMDDhhmmss
+		% if /CreationDate is left out it will default to the file creation date
+               /Keywords (Social Media; Remote Australia; Rural Australia)}
+    \pdfcatalog { /PageMode (/UseOutlines) /OpenAction (fitbh)  }
+\fi
+
+\makeindex
+
+\input{glossary}
+
+\begin{document}
+
+\frontmatter
+
+%%%%% Acknowledgements, titlepage, abstract, list of publications
+\title{Connecting the Bush: Can IT facilitate and empower communities in Rural and Remote Australia}
+
+
+  \author{\href{mailto:chris.rauchle@gmail.com}{Chris Rauchle}}
+  \department{Computer Science}
+
+
+%%%%% Submission date if different from creation date
+\submitdate{August 2018}
+
+% honours students will want to use the keyword honours instead of Ph.D. :)
+% or override the \degreetext variable with
+% something appropriate like:
+% \renewcommand{\degreetext}%
+% {in partial fulfilment of the Degree of Bachelor of Science with Honours}
+% also easy to changes this to be for Masters degrees.
+
+\titlepage
+
+%\input{acknowledge}
+%\input{listofpublications}
+\input{abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\printglossary
+
+\printglossary[type=\acronymtype]
+
+
+
+\mainmatter
+
+%%%%% Introduction
+%\input{ch_intro/chap_intro}
+
+%%%%% Other chapters in here
+\input{Introduction}
+%\input{LitReview} %Ditching the Lit Review
+%\input{Experiment} %combining Experiment with Introduction
+\input{CultureandSociety}
+\input{Economy}
+\input{HealthandWellbeing}
+\input{Technology}
+\input{ConclusionandFurtherResearch}
+
+
+
+%%%%% Appendix - nothing in here at the moment so commented out
+\begin{appendices}
+\chapter{Survey Questions}
+
+\includepdf[pages={1-},scale=1]{figures/ConnectingTheBush.pdf}
+
+
+\end{appendices}
+
+\backmatter
+
+%%%%% List of symbols
+% your thesis may not need this, so comment out or delete the following line
+%\input{listofsymbols}
+
+%%%%% Bibliography, in BibTeX format (the references.bib file)
+
+%\bibliography{references}
+\printbibliography
+
+ 
+\printindex
+
+\end{document}
